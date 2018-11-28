@@ -1,0 +1,7 @@
+https://www.dataquest.io/blog/web-scraping-tutorial-python/
+
+
+https://pythonspot.com/personal-assistant-jarvis-in-python/
+
+
+https://davidvaleri.wordpress.com/2015/05/25/innovating-with-an-arduino-traffic-light-noise-meter/

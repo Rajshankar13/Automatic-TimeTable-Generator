@@ -1,0 +1,17 @@
+SQLite is an in-process library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. The code for SQLite is in the public domain and is thus free for use for any purpose,commercial or private.
+
+we do not require any server to be configured 
+database= collection of many tables
+table- where information is always stored in form of rows and columns
+every colum is a field and every row is a record
+
+to make a table
+"create table tablename(columnname datatype etc)"
+to insert record
+"insert into tablename values(value1,value2)"
+to display all records
+"select columname1,columname2 from tablename"
+to update records
+"update tablename set columnname=value where condition"
+to delete record
+"delete from tablename where condition"

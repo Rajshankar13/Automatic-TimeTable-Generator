@@ -1,0 +1,65 @@
+conn = sql.connect('timetable1.db')
+
+def db():
+	with conn:
+		s = sname.get()
+		st = staff.get()
+		h1 = int(h.get())
+		d1 = d.get()
+		cur = conn.cursor()
+#		cur.execute("DROP TABLE IF EXISTS INFO1")
+		cur.execute("INSERT INTO INFO1 VALUES (?, ?, ?, ?);", (s, st, h1, d1))
+		print("Added Successfully!")
+		cur.execute("SELECT SUBJECTNAME, STAFFNAME, NOH, DEC FROM INFO1")
+#		cur.commit()
+#		for row in cur:
+#			print("Subject:",row[0],"Staff:",row[1],"NOH:",row[2],"T/P:",row[3])
+def show():
+#	print("HI")
+	cur = conn.execute("SELECT SUBJECTNAME, STAFFNAME, NOH, DEC FROM INFO1")
+	for row in cur:
+		print("Subject:",row[0],"Staff:",row[1],"NOH:",row[2],"T/P:",row[3])
+
+#conn.close()
+
+def delete():
+	conn.execute("DELETE FROM INFO1;")
+	print("Deletion Successful!")
+
+global sname,staff,h,d
+
+root = Tk()
+root.title("TT")
+root.geometry("500x200+100+200")
+
+frame = Frame(root, height=720, width=720, bd=4)
+frame.grid()
+sname = StringVar()
+l1 = Label(frame, text="Enter Subject name:-")
+l1.grid(row=0, column=0, sticky="e")
+e1 = Entry(frame, textvariable=sname)
+e1.grid(row=0, column=1)
+staff = StringVar() 
+l2 = Label(frame, text="Enter Staff name:-")
+l2.grid(row=1, column=0, sticky="e")
+e2 = Entry(frame, textvariable=staff)
+e2.grid(row=1, column=1)
+h = IntVar()
+l3 = Label(frame, text="Enter Number of hours:-")
+l3.grid(row=2, column=0, sticky="e")
+e3 = Entry(frame, textvariable=h)
+e3.grid(row=2, column=1)
+d = StringVar()
+l4 = Label(frame, text="Theory/Practical:-")
+l4.grid(row=3, column=0, sticky="e")
+e4 = Entry(frame, textvariable=d)
+e4.grid(row=3, column=1)
+
+b1 = Button(frame, text="Add", command=db)
+b1.grid(row=4, column=0)
+b2 = Button(frame, text="Show", command=show)
+b2.grid(row=4, column=1)
+b3 = Button(frame, text="Delete DB", command=delete)
+b3.grid(row=4, column=2)
+
+root.mainloop()

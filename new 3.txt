@@ -1,0 +1,29 @@
+14 teachers
+year 1---6T 5P--->5+4+4+4+4+2 + 2x5 = 33
+year 2---5T 4P--->5+5+4+4+4 + 2x4 = 30
+year 3---4T 4P--->5+5+5+4 + 2x4 = 27
+
+YEAR 1
+DG-2
+RJ-2
+NS-2
+SP-2
+MO-1
+SD-1
+
+YEAR 2
+MK-2
+ST-1
+RK-2
+SR-2
+KS-1
+AR-1
+
+YEAR 3
+LR-1
+SD-1
+AR-1
+AS-2
+MO-1
+KS-1
+ST-1
